@@ -1,0 +1,143 @@
+@media screen and (max-width: 1024px) {
+  .top-header-nav {
+    padding-left: 2vw !important;
+  }
+
+  .left-side-bar {
+    position: absolute;
+    width: 20vw;
+    left: -100%;
+    height: 90vh;
+    margin-top: 10vh !important;
+    width: 30vw;
+  }
+
+  .menubar-display {
+    display: block;
+  }
+
+  .left-side-bar.active {
+    left: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  main {
+    width: 100vw;
+  }
+
+  footer {
+    width: 100vw;
+  }
+
+  .upcoming-content {
+    width: 38vw !important;
+  }
+
+  .upcoming-content-one {
+    width: 38vw !important;
+  }
+
+  .post-content {
+    width: 38vw !important;
+  }
+
+  .availability-overlay {
+    width: 100%;
+  }
+
+  .availability-session-time{
+    flex-direction: column;
+  }
+
+  .availability-tex-res div:nth-child(1){
+  width: 90%!important;
+  }
+
+  .availability-tex-res div:nth-child(2){
+    width: 10%!important;
+    }
+
+  .availability-res-calendar-time{
+    flex-direction: column!important;
+  }
+
+  .availability-res-calendar,.availability-res-time{
+    width: 100%!important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .upcoming-content {
+    width: 100% !important;
+  }
+
+  .upcoming-content-one {
+    width: 100% !important;
+  }
+
+  .post-content {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .chart-width {
+    width: 100%;
+  }
+
+  .chart-award-res{
+    flex-direction: column;
+  }
+  
+  .award-width {
+    width: 100%;
+    padding: 15px!important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .left-side-bar {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .left-side-bar {
+    width: 70vw;
+  }
+
+  .tutor-text-res{
+    text-align: center;
+  }
+
+  .responsive-css-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .responsive-css-col {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .upcoming-content {
+    height: 50vh !important;
+    gap: 0 !important;
+  }
+
+  .upcoming-content-one {
+    height: 50vh !important;
+    gap: 0 !important;
+  }
+
+  .post-content {
+    height: 40vh !important;
+    gap: 0 !important;
+  }
+
+  .chart-text-res{
+    flex-direction: column;
+    margin-bottom: 20px!important;
+  }
+}

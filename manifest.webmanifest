@@ -1,0 +1,12 @@
+{
+  "lang": "en-us",
+  "name": "Dgtal Space Frontend Task",
+  "short_name": "DgtalSpaceFrontendTask",
+  "description": "A frontend web technoloy task with html,css,bootstrap and js",
+  "start_url": "/",
+  "background_color": "#2f3d58",
+  "theme_color": "#2f3d58",
+  "orientation": "any",
+  "display": "standalone",
+  "icons": [{ "src": "images/AppIcon512.png", "sizes": "512x512" }]
+}

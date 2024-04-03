@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* css reset  */
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-decoration: none !important;
+  list-style: none !important;
+  text-transform: none !important;
+  box-sizing: border-box !important;
+  user-select: none !important;
+}
+
+/* root css  */
+
+:root {
+  --white-color: #ffffff;
+  --light-white-color: #e5e7eb;
+  --green-color: #235940;
+  --light-green-color: #86cb3c;
+}
+
+/* header css  */
+
+.left-side-bar {
+  width: 15vw;
+  height: 100vh;
+  position: fixed !important;
+  z-index: 1001;
+  background-color: var(--white-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.top-header-nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  padding-left: 15vw !important;
+  z-index: 1000;
+  background-color: var(--white-color);
+}
+
+.bg-active-link {
+  background-color: var(--green-color);
+}
+
+.bg-active-link a {
+  color: var(--white-color);
+}
+
+.menubar-display {
+  display: none;
+}
+
+/* main css  */
+
+main {
+  margin-top: 10vh !important;
+  background-color: var(--light-white-color);
+  width: 85vw;
+  float: right;
+}
+
+section {
+  background-color: var(--white-color);
+}
+
+.seleted-icon-bg{
+    top: 7px;
+    left: 10px;
+}
+
+#weekly-activity{
+    outline: none;
+}
+
+.chart-award {
+  background-color: var(--light-white-color);
+}
+
+.chart-width {
+  width: 70%;
+  background-color: var(--white-color);
+}
+
+.award-width {
+  width: 30%;
+  background-color: var(--white-color);
+}
+
+.award-range {
+  height: 10px;
+  background-color: var(--light-white-color);
+  position: relative;
+}
+
+.award-range::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  background-color: var(--light-green-color);
+  z-index: 998;
+  left: 0;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.crown-award {
+  border: 1px solid var(--light-white-color);
+}
+
+.upcoming-content {
+  background-color: var(--white-color);
+  border: 3px solid var(--light-white-color);
+  width: 25vw !important;
+  height: 30vh !important;
+}
+
+.upcoming-content-one {
+  background-color: var(--green-color);
+  width: 25vw !important;
+  height: 30vh !important;
+}
+
+.upcoming-time-one {
+  background-color: var(--white-color);
+}
+
+.overlay-img {
+  z-index: 100;
+  top: -24px;
+  right: -26px;
+}
+
+.upcoming-time {
+  background-color: var(--light-white-color);
+}
+
+.post-content {
+  background-color: var(--white-color);
+  border: 3px solid var(--light-white-color);
+  width: 25vw !important;
+  height: 30vh !important;
+}
+
+.post-time-one {
+  background-color: var(--green-color);
+}
+
+.post-time {
+  background-color: var(--light-white-color);
+}
+
+/* schedule.html  */
+
+.chat-session {
+  border: 3px solid var(--light-white-color);
+}
+
+.chat-border {
+  border-right: 3px solid var(--light-white-color);
+}
+
+.schedule-session-button {
+  height: 10vh;
+}
+
+.chat-history {
+  height: 68vh;
+}
+
+.chat-icons {
+  height: 10vh;
+}
+
+.availability-res-time{
+align-self: flex-start;
+}
+
+/* footer css  */
+
+footer {
+  width: 85vw;
+  float: right;
+  text-align: center;
+}
+
+/* scroll bar css  */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  background-color: var(--green-color);
+  border-radius: 4px;
+  border: 1px solid var(--green-color);
+}
+
+a {
+  cursor: pointer;
+}
+
+.availability-overlay {
+  transform: translate(-50%, -50%);
+  width: 70%;
+  z-index: 1002;
+  box-shadow: 10px 10px 37px 50px var(--light-white-color);
+  background: var(--white-color);
+  height: 70vh;
+  overflow-x: scroll;
+  display: none;
+}
+
+.availability-overlay.active {
+    display: block;
+  }
+
+.avalibility-hours,
+.avalibility-minutes,
+.avalibility-am-pm {
+  border: none;
+}
+
+.availability-section {
+  border: 1px solid var(--light-white-color);
+}
+
+.calendar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar ul li {
+  width: calc(100% / 7);
+  margin-top: 25px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.days {
+  font-weight: 600;
+}
+
+.dates li.inactive {
+  color: #ccc;
+  cursor: not-allowed;
+}

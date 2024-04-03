@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags  -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="This is a frontend web developement task given Dgtal Space. We had to convert the whole figma into html,css,js,bootstrap code." />
+    <meta name="keywords"
+        content="Web Development, Frontend Web Developer,HTML,CSS,JS,BOOTSTRAP,Chart JS,Swiper Js, Fontawesome Icons, Manifest Link, Dgtal Space, Task" />
+    <meta name="author" content="Md. Arafat Akash" />
+    <meta name="robots" content="index, follow" />
+    <!-- link tags  -->
+    <!-- manifest link  -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- favicon link  -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- fontawesome icons link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- bootstrap css link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- external css link  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- website title  -->
+    <title>Dgtal Space | Dashboard</title>
+</head>
+
+<body>
+    <!-- header start  -->
+    <header class="d-flex">
+        <div class="p-3 left-side-bar" id="sidebar">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="./"><img src="images/After the school bell logo 2.png" alt="School Bell" /></a>
+                <a href="#"><img src="images/left-right-arrow.png" alt="Left Right Arrow" /></a>
+            </div>
+            <div class="mt-4">
+                <nav>
+                    <ul class="d-flex flex-column gap-2">
+                        <li class="d-flex align-items-center gap-4 p-2 rounded bg-active-link">
+                            <img src="images/Home.png" alt="Home" width="20px" height="14px" loading="lazy" /><a
+                                href="./">Home</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-4 p-2 rounded">
+                            <img src="images/calendar.png" alt="Calendar" width="20px" height="14px" loading="lazy" /><a
+                                class="text-dark fw-light" href="schedule.html">Schedule</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-4 p-2 rounded">
+                            <img src="images/messages.png" alt="Messages" width="20px" height="14px" loading="lazy" /><a
+                                class="text-dark fw-light" href="#">Message</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-4 p-2 rounded">
+                            <img src="images/student.png" alt="Student" width="20px" height="14px" loading="lazy" /><a
+                                class="text-dark fw-light" href="#">Student</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="w-100 d-flex justify-content-between p-3 top-header-nav">
+            <div class="left-nav d-flex align-items-center justify-content-center">
+                <a id="menubar"><i class="fa-solid fa-bars me-3 fs-4 text-success menubar-display"></i></a>
+                <h3>Hello, Charlie 👋</h3>
+            </div>
+            <div class="right-nav d-flex align-items-center gap-3">
+                <a href="#"><img src="images/Notification.png" alt="Notification" width="20px" height="20px"
+                        loading="lazy" /></a>
+                <a href="#"><img src="images/Avatar.png" alt="Avatar" width="40px" height="40px" loading="lazy" /></a>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- main start  -->
+    <main class="p-4">
+        <!-- chart report  -->
+        <section class="rounded chart-award">
+            <div class="d-flex rounded justify-content-between gap-4 chart-award-res">
+                <div class="chart-width p-3 rounded">
+                    <div class="d-flex align-items-center justify-content-between chart-text-res">
+                        <h3 class="fw-bold mb-3 tutor-text-res">Tutoring Statistics</h3>
+                        <div class="position-relative">
+                            <label class="position-absolute seleted-icon-bg" for="weekly-activity"><i class="fa-regular fa-calendar fs-6 text-success"></i></label>
+                            <select name="weekly-activity" id="weekly-activity" class="py-2 text-end border-success rounded">
+                                <option value="1" selected class="text-dark fw-light">This Week</option>
+                                <option value="2" class="text-dark fw-light">Last Week</option>
+                                <option value="3" class="text-dark fw-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last Month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="award-width rounded d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-flex align-items-center justify-content-center flex-column gap-2">
+                        <img src="images/crown.png" class="crown-award rounded" alt="Crown" loading="lazy" width="96px"
+                            height="96px">
+                        <h3 class="mt-4 fw-bold">Silver Award</h3>
+                        <h6 class="fw-light">Great job, keep it up!</h6>
+                    </div>
+                    <div class="d-flex flex-column w-75 mt-5">
+                        <div class="award-range rounded"></div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p class="fw-light fs-6"><span class="fw-bold">9 / 40</span> hours</p>
+                            <img src="images/Frame 1000003683.png" alt="Frame" loading="lazy" width="54px"
+                                height="20px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- upcoming sessions  -->
+        <section class="p-3 rounded mt-4">
+            <h5 class="mb-4 fw-bolder">Upcoming Sessions (Slideable)</h5>
+            <div class="swiper all-swipe">
+                <div class="swiper-wrapper d-flex align-items-center gap-4">
+                    <div class="swiper-slide">
+                        <div
+                            class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 upcoming-content-one">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-light mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-light">Theorema Pytagoras</h6>
+                                </div>
+                                <div class="position-relative">
+                                    <img src="images/Avatar3.png" alt="Avatar3" loading="lazy" width="40px"
+                                        height="40px" />
+                                    <img class="position-absolute overlay-img" src="images/Overlay.png" alt="Overlay"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <a href="#"
+                                    class="d-flex align-items-center gap-2 bg-white px-3 py-2 rounded-3 text-dark fw-semibold"><img
+                                        src="images/video.png" alt="Video" width="20px" height="14px"
+                                        loading="lazy" />Join
+                                    Session</a>
+                                <a href="#"
+                                    class="text-success px-3 py-1 bg-light rounded-pill fw-semibold upcoming-time-one">Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 upcoming-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Theorema Pytagoras 2</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar2.png" alt="Avatar" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex flex-column justify-content-between gap-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                            height="20px" loading="lazy" />
+                                        <p class="fw-light fs-6">Sunday, Oct 2</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/clock.png" alt="Clock" class="me-2" width="20px" height="20px"
+                                            loading="lazy" />
+                                        <p class="fw-light fs-6">3:30 pm</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-dark px-3 py-1 rounded-pill fw-semibold upcoming-time">in 2
+                                    hours</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 upcoming-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Theorema Pytagoras 3</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar2.png" alt="Avatar" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex flex-column justify-content-between gap-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                            height="20px" loading="lazy" />
+                                        <p class="fw-light fs-6">Monday, Oct 4</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/clock.png" alt="Clock" class="me-2" width="20px" height="20px"
+                                            loading="lazy" />
+                                        <p class="fw-light fs-6">3:30 pm</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-dark px-3 py-1 rounded-pill fw-semibold upcoming-time">in 2
+                                    days</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 upcoming-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Theorema Pytagoras 3</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar2.png" alt="Avatar" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex flex-column justify-content-between gap-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                            height="20px" loading="lazy" />
+                                        <p class="fw-light fs-6">Monday, Oct 4</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/clock.png" alt="Clock" class="me-2" width="20px" height="20px"
+                                            loading="lazy" />
+                                        <p class="fw-light fs-6">3:30 pm</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-dark px-3 py-1 rounded-pill fw-semibold upcoming-time">in 2
+                                    days</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 upcoming-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Theorema Pytagoras 3</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar2.png" alt="Avatar" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex flex-column justify-content-between gap-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                            height="20px" loading="lazy" />
+                                        <p class="fw-light fs-6">Monday, Oct 4</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/clock.png" alt="Clock" class="me-2" width="20px" height="20px"
+                                            loading="lazy" />
+                                        <p class="fw-light fs-6">3:30 pm</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-dark px-3 py-1 rounded-pill fw-semibold upcoming-time">in 2
+                                    days</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- post surveys  -->
+        <section class="p-3 rounded mt-4">
+            <h5 class="mb-2 fw-bolder">Post Survey (Slideable)</h5>
+            <h5 class="mb-4 fw-light fs-6">How was your session?</h5>
+            <div class="swiper all-swipe">
+                <div class="swiper-wrapper d-flex align-items-center gap-4">
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 post-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Shapes</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar2.png" alt="Avatar2" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                        height="20px" loading="lazy" />
+                                    <p class="fw-light fs-6">Yesterday</p>
+                                </div>
+                                <a href="#" class="text-light px-3 py-1 rounded fw-semibold post-time-one">Fill
+                                    Survey</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 post-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Theorema Pytagoras 2</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar3.png" alt="Avatar3" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                        height="20px" loading="lazy" />
+                                    <p class="fw-light fs-6">3 days ago</p>
+                                </div>
+                                <a href="#" class="text-success px-3 py-1 rounded-pill fw-semibold post-time">Filled,
+                                    thanks 🥳</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 post-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Theorema Pytagoras 3</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar3.png" alt="Avatar3" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                        height="20px" loading="lazy" />
+                                    <p class="fw-light fs-6">3 days ago</p>
+                                </div>
+                                <a href="#" class="text-success px-3 py-1 rounded-pill fw-semibold post-time">Filled,
+                                    thanks 🥳</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 post-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Theorema Pytagoras 2</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar3.png" alt="Avatar3" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                        height="20px" loading="lazy" />
+                                    <p class="fw-light fs-6">3 days ago</p>
+                                </div>
+                                <a href="#" class="text-success px-3 py-1 rounded-pill fw-semibold post-time">Filled,
+                                    thanks 🥳</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column justify-content-between gap-5 p-3 rounded-3 post-content">
+                            <div class="d-flex align-items-center justify-content-between responsive-css-col">
+                                <div>
+                                    <h6 class="fw-semibold text-dark mb-2">Mathematic</h6>
+                                    <h6 class="fw-light text-dark">Theorema Pytagoras 3</h6>
+                                </div>
+                                <div>
+                                    <img src="images/Avatar3.png" alt="Avatar3" loading="lazy" width="40px"
+                                        height="40px" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4 responsive-css-flex">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/calendar.png" alt="Calendar" class="me-2" width="20px"
+                                        height="20px" loading="lazy" />
+                                    <p class="fw-light fs-6">3 days ago</p>
+                                </div>
+                                <a href="#" class="text-success px-3 py-1 rounded-pill fw-semibold post-time">Filled,
+                                    thanks 🥳</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main end  -->
+    <!-- footer start  -->
+    <footer class="mt-5">
+        <p class="text-dark fs-6 fw-light">Developed By <a class="fw-bold text-success"
+                href="https://arafatakashakku.netlify.app/" target="_blank">Md. Arafat Akash</a></p>
+    </footer>
+    <!-- footer end  -->
+    <!-- bootstrap js link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- swipper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- chart js  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- external js link  -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
